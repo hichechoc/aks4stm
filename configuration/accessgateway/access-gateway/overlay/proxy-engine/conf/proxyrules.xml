@@ -1,14 +1,18 @@
 <?xml version="1.0"?>
 <?cocoon-process type="xslt"?>
+
 <!DOCTYPE nete:proxyrules SYSTEM "file:////opt/CA/secure-proxy/proxy-engine/conf/dtd/proxyrules.dtd">
-<!-- Proxy Rules-->
-<nete:proxyrules xmlns:nete="http://www.ca.com/">
-	<nete:cond criteria="beginswith" type="uri">
-		<nete:case value="/protected">
-			<nete:forward>http://www.google.com$1</nete:forward>
+<!-- Proxy Rules -->
+<!-- replace www.example.com with your namespace -->
+<nete:proxyrules xmlns:nete="https://sps.tanzulab.it/">
+	<nete:cond type="host">
+		<!-- replace banking.example.com with a virtual host defined in the server.conf file -->
+		<nete:case value="sps.tanzulab.it:443">
+			<!-- replace http://server1.example.com with the appropriate destination server -->
+			<nete:forward>https://www.inail.it/</nete:forward>
 		</nete:case>
 		<nete:default>
-			<nete:forward>http://www.ca.com$1</nete:forward>
-		</nete:default>
+			<nete:forward>https://www.inail.it/</nete:forward>
+		</nete:default>		
 	</nete:cond>
 </nete:proxyrules>

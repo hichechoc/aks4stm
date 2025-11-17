@@ -7,7 +7,7 @@
 <nete:proxyrules xmlns:nete="https://sps.akslab.com/">
 	<nete:cond criteria="beginswith" type="uri">
 		<nete:case value="/protected">
-				<nete:forward>https://www.inail.it</nete:forward>
+				<nete:forward>https://www.broadcom.com/</nete:forward>
 		</nete:case>
 		<nete:default>
 			<nete:forward>https://www.google.com</nete:forward>

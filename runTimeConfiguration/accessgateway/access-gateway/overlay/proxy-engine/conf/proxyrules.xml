@@ -1,3 +1,7 @@
+<?xml version="1.0"?>
+<?cocoon-process type="xslt"?>
+
+<!DOCTYPE nete:proxyrules SYSTEM "file:////opt/CA/secure-proxy/proxy-engine/conf/dtd/proxyrules.dtd">
 <nete:proxyrules xmlns:nete="https://sps.akslab.com/">
 
     <!-- Host principale -->

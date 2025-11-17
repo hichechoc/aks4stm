@@ -9,12 +9,14 @@
 		<nete:case value="/protected/case1">
 				<nete:forward>https://www.broadcom.com/</nete:forward>
 		</nete:case>
+		<nete:default>
+			<nete:forward>https://www.google.com</nete:forward>
+		</nete:default>		
 	</nete:cond>
 	<nete:cond type="host">
 		<nete:case value="sps.tanzulab.it">
 			<nete:forward>https://www.inail.it/</nete:forward>
 		</nete:case>
-	</nete:cond>
 		<nete:default>
 			<nete:forward>https://www.google.com</nete:forward>
 		</nete:default>		

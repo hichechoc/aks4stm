@@ -1,24 +1,26 @@
-<?xml version="1.0"?>
-<?cocoon-process type="xslt"?>
+<nete:proxyrules xmlns:nete="https://sps.tanzulab.it/">
 
-<!DOCTYPE nete:proxyrules SYSTEM "file:////opt/CA/secure-proxy/proxy-engine/conf/dtd/proxyrules.dtd">
-<!-- Proxy Rules -->
-<!-- replace www.example.com with your namespace -->
-<nete:proxyrules xmlns:nete="https://sps.akslab.com/">
-	<nete:cond criteria="equals" type="uri">
-		<nete:case value="/protected/case1">
-				<nete:forward>https://www.broadcom.com/</nete:forward>
-		</nete:case>
-		<nete:default>
-			<nete:forward>https://www.google.com</nete:forward>
-		</nete:default>		
-	</nete:cond>
-	<nete:cond type="host">
-		<nete:case value="sps.tanzulab.it">
-			<nete:forward>https://www.inail.it/</nete:forward>
-		</nete:case>
-		<nete:default>
-			<nete:forward>https://www.google.com</nete:forward>
-		</nete:default>		
-	</nete:cond>
+    <!-- Host principale -->
+    <nete:cond type="host">
+        <nete:case value="sps.tanzulab.it">
+
+            <!-- Regole per i path -->
+            <nete:cond type="uri" criteria="equals">
+                <nete:case value="/protected/case1">
+                    <nete:forward>https://www.broadcom.com/</nete:forward>
+                </nete:case>
+
+                <nete:default>
+                    <nete:forward>https://www.inail.it/</nete:forward>
+                </nete:default>
+            </nete:cond>
+
+        </nete:case>
+
+        <!-- Default host fallback -->
+        <nete:default>
+            <nete:forward>https://www.google.com/</nete:forward>
+        </nete:default>
+    </nete:cond>
+
 </nete:proxyrules>

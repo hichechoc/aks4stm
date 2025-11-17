@@ -12,7 +12,7 @@
 			<nete:forward>https://www.inail.it</nete:forward>
 		</nete:case>
 		<nete:default>
-			<nete:forward>https://www.inail.it</nete:forward>
+			<nete:forward>https://www.google.com</nete:forward>
 		</nete:default>		
 	</nete:cond>
 </nete:proxyrules>

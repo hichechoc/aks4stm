@@ -6,7 +6,7 @@
 
     <!-- Host principale -->
     <nete:cond type="host">
-        <nete:case value="sps.akslab.com:6080">
+        <nete:case value="sps.akslab.com">
 
             <!-- Regole per i path -->
             <nete:cond type="uri" criteria="equals">

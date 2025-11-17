@@ -1,8 +1,8 @@
-<nete:proxyrules xmlns:nete="https://sps.tanzulab.it/">
+<nete:proxyrules xmlns:nete="https://sps.akslab.com/">
 
     <!-- Host principale -->
     <nete:cond type="host">
-        <nete:case value="sps.tanzulab.it">
+        <nete:case value="sps.akslab.com">
 
             <!-- Regole per i path -->
             <nete:cond type="uri" criteria="equals">
